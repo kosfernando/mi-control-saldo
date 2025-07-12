@@ -1,0 +1,15 @@
+{
+  "name": "Mi Control de Saldo",
+  "short_name": "Saldo",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#28a745",
+  "icons": [
+    {
+      "src": "https://img.icons8.com/color/96/money.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ]
+}

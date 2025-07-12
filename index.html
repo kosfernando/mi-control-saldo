@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Control de Saldo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <nav>
+    <h2>💰 Mi Control de Saldo</h2>
+    <button id="btn-historial">📜 Ver Historial</button>
+  </nav>
+
+  <main>
+    <h1>Mi Saldo: S/ <span id="saldo">0</span></h1>
+    <input type="number" id="cantidad" placeholder="S/ monto" />
+    <br>
+    <button onclick="sumar()">➕ Agregar</button>
+    <button onclick="restar()">➖ Gastar</button>
+
+    <section id="historial" class="oculto">
+      <h3>📜 Historial</h3>
+      <ul id="lista-historial"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(reg => console.log("✔️ Service Worker registrado"))
+        .catch(err => console.error("❌ Error con el Service Worker", err));
+    }
+  </script>
+</body>
+</html>
